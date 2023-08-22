@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imc_challenge/src/modules/home/home_page.dart';
+import 'package:imc_challenge/src/pages/home_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
