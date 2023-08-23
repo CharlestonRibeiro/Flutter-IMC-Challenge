@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:imc_challenge/src/controllers/imc_controller.dart';
+import 'package:imc_challenge/src/data/db.dart';
 import 'package:imc_challenge/src/models/person_model.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,6 +18,7 @@ class _HomePageState extends State<HomePage> {
   final weight = TextEditingController();
   final height = TextEditingController();
   final imcController = ImcController();
+  final Db _db = Db();
 
   @override
   void dispose() {
@@ -25,6 +27,20 @@ class _HomePageState extends State<HomePage> {
     height.dispose();
     super.dispose();
   }
+
+  @override
+  void initState() {
+    super.initState();
+    _loadIMCList(); // Carregue a lista do banco de dados ao iniciar a tela
+  }
+
+  Future<void> _loadIMCList() async {
+    final imcList = await _db.getIMCList();
+    setState(() {
+      imcController.listIMC.addAll(imcList.map((item) => item['item']));
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {

@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:imc_challenge/src/data/db.dart';
 import 'package:imc_challenge/src/models/person_model.dart';
 
 class ImcController extends ChangeNotifier {
 
   final List listIMC = [];
 
+ final Db _db = Db(); // Instancie o DatabaseHelper
 
-  void addIMC(String item) {
+  Future<void> addIMC(String item) async {
     listIMC.add(item);
+    await _db.insertIMC(item); // Insira no banco de dados
     notifyListeners();
   }
+
+
+  // void addIMC(String item) {
+  //   listIMC.add(item);
+  //   notifyListeners();
+  // }
 
   double calculateIMC({required PersonModel personModel}) {
     double imc = personModel.weight / (personModel.height * personModel.height);
