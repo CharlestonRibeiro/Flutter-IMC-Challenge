@@ -9,6 +9,7 @@ O desafio consiste em criar um aplicativo em Flutter que seja capaz de calcular 
 <p align="center">
   <img src="https://github.com/CharlestonRibeiro/Flutter-IMC-Challenge/blob/main/assets/1.png" width="300" height="700" />
   <img src="https://github.com/CharlestonRibeiro/Flutter-IMC-Challenge/blob/main/assets/2.png" width="300" height="700" />
+  <img src="https://github.com/CharlestonRibeiro/Flutter-IMC-Challenge/blob/main/assets/3.png" width="300" height="700" />
 </p>
 
 ## Checklist do Desafio
@@ -20,3 +21,4 @@ O desafio consiste em criar um aplicativo em Flutter que seja capaz de calcular 
 - [X] Criar uma lista que exibe registros anteriores de IMC;
 - [X] Garantir a formatação correta e a aparência agradável do aplicativo;
 - [X] Testar o aplicativo em diferentes cenários para garantir seu funcionamento correto;
+- [X] Persistir os dados usando SQLite para manter um histórico de IMC
