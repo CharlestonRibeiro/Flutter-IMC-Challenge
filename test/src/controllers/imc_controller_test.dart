@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:imc_challenge/src/controllers/imc_controller.dart';
 import 'package:imc_challenge/src/models/person_model.dart';
 
-final imcService = ImcService();
+final imcService = ImcController();
 final personModel = PersonModel(name: 'Charles', weight: 80, height: 1.70);
 
 void main() {
